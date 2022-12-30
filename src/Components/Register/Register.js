@@ -1,16 +1,20 @@
 import React from "react";
-import useFirebase from "../../hooks/useFirebase";
 
-const Login = () => {
-  const { signInWithGoogle } = useFirebase();
+const Register = () => {
   return (
     <div>
       <div className=" w-3/5 mx-auto bg-gray-500 py-5 mt-5 rounded-lg">
-        <button onClick={signInWithGoogle} className="text-white px-3 py-2 bg-purple-700">Sign In With Google</button>
         <p className="text-center text-2xl text-white font-semibold">
-          Please Login Now
+          Please Register Now
         </p>
         <form>
+          <input
+            className="w-4/5 mx-auto border-2 rounded-lg px-2 py-3 my-1 "
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+          />
+          <br />
           <input
             className="w-4/5 mx-auto border-2 rounded-lg px-2 py-3 my-1 "
             type="email"
@@ -28,7 +32,7 @@ const Login = () => {
           <input
             className="bg-purple-700 text-yellow-500 px-4 py-2 mt-2 rounded-lg font-semibold"
             type="submit"
-            value="Login"
+            value="Register"
           />
         </form>
       </div>
@@ -36,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
